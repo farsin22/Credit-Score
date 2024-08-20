@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Credit Score</title>
+        <link rel="stylesheet" href="/static/styleh.css">
+    </head>
+    <body>
+        <h1>Finding Credit Score and</h1>
+
+        <form action="{{url_for('predict')}}" method="post">
+            <label for="Annual_Income">Annual Income</label>
+            <input type="number" id="Annual_Income" name="Annual_Income" min="7005.93" max="150131.68" required><br><br>
+            <label for="Monthly_Inhand_Salary">Monthly Inhand_Salary</label>
+            <input type="number" id="Monthly_Inhand_Salary" name="Monthly_Inhand_Salary" min="332.12" max="12034.43" required><br><br>
+            <label for="Outstanding_Debt">Outstanding Debt</label>
+            <input type="number" id="Outstanding_Debt" name="Outstanding_Debt" min="0" max="3615.94" required><br><br>
+            <label for="Credit_History_Age">Credit History Age</label>
+            <input type="number" id="Credit_History_Age" name="Credit_History_Age" min="1" max="404" required><br><br>
+            <label for="Total_EMI_per_month">Total EMI_per month</label>
+            <input type="number" id="Total_EMI_per_month" name="Total_EMI_per_month" min="0" max="1775" required><br><br>
+            <label for="Amount_invested_monthly">Amount invested monthly</label>
+            <input type="number" id="Amount_invested_monthly" name="Amount_invested_monthly" min="0" max="434.19" required><br><br>
+            <label for="Monthly_Balance">Monthly Balance</label>
+            <input type="number" id="Monthly_Balance" name="Monthly_Balance" min="0" max="1183.62" required><br><br>
+            <label for="Num_Bank_Accounts">Num Bank Accounts</label>
+            <input type="number" name="Num_Bank_Accounts" id="Num_Bank_Accounts" min="0" max="11" required><br><br>
+            <label for="Num_Credit_Card">Num Credit Card</label>
+            <input type="number" name="Num_Credit_Card" id="Num_Credit_Card" min="0" max="11" required><br><br>
+            <label for="Interest_Rate">Interest Rate</label>
+            <input type="number" name="Interest_Rate" id="Interest_Rate" min="1" max="34" required><br><br>
+            <label for="Num_of_Loan">Num of Loan</label>
+            <input type="number" name="Num_of_Loan" id="Num_of_Loan" min="0" max="9" required><br><br>
+            <label for="Num_of_Delayed_Payment">Num of Delayed Payment</label>
+            <input type="number" name="Num_of_Delayed_Payment" id="Num_of_Delayed_Payment" min="0" max="25" required><br><br>
+            <label for="Credit_Mix">Credit Mix</label>
+            <select name="Credit_Mix" id="Credit_Mix">
+            <option value="0">Standard</option>
+            <option value="1">Good</option>
+            <option value="2">Bad</option>
+              </select><br><br>
+                <label for="Payment_of_Min_Amount">Payment of Min Amount</label>
+            <input type="number" name="Payment_of_Min_Amount" id="Payment_of_Min_Amount" min="0" max="2" required><br><br>
+            <label for="Payment_Behaviour">Payment Behaviour</label>
+            <select name="Payment_Behaviour" id="Payment_Behaviour">
+                <option value="5">High spent Small value payments</option>
+                <option value="1">Low spent Large value payments</option>
+                <option value="0">Low spent Medium value payments</option>
+                <option value="4">Low spent Small value payments</option>
+                <option value="2">High spent Medium value payments</option>
+                <option value="3">High spent Large value payments</option>
+            </select><br><br>
+            <input type="submit" id="submit">
+        </form>
+    </body>
+</html>
